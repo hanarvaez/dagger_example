@@ -1,4 +1,4 @@
-package co.com.monkeymobile.coffee;
+package co.com.monkeymobile.example;
 
 class Exec {
 

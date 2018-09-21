@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.2.51'
+    id "net.ltgt.apt" version "0.10"
 }
 
 version '1.0-SNAPSHOT'
@@ -13,6 +14,8 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile 'com.google.dagger:dagger:2.x'
+    apt 'com.google.dagger:dagger-compiler:2.x'
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 

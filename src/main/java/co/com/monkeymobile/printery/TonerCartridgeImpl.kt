@@ -1,4 +1,26 @@
 package co.com.monkeymobile.printery
 
-class TonerCartridgeImpl {
+import javax.inject.Inject
+
+class TonerCartridgeImpl @Inject constructor(private val capacity: Int) : TonerCartridge {
+
+    private var level: Int = 0
+
+    init {
+        level = capacity
+    }
+
+    override fun recharge() {
+        println("Rechargin toner...")
+        level = capacity
+    }
+
+    override fun decrease() {
+        level--
+    }
+
+    override fun getLevel(): Int {
+        println("Getting toner level...")
+        return level
+    }
 }

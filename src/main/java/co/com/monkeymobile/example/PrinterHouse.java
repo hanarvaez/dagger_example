@@ -1,6 +1,6 @@
 package co.com.monkeymobile.example;
 
-class Exec {
+class PrinterHouse {
 
     public static void main(String[] args) {
         System.out.println("Hello world");

@@ -6,6 +6,10 @@ abstract class PaperTrayImpl @Inject constructor(private val capacity: Int) : Pa
 
     private var level: Int = 0
 
+    init {
+        level = capacity
+    }
+
     override fun recharge() {
         println("Rechargin paper...")
         level = capacity

@@ -1,4 +1,4 @@
-package co.com.monkeymobile.example
+package co.com.monkeymobile.printery
 
 internal object PrintingHouse {
 

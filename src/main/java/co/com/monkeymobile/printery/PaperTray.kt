@@ -4,5 +4,4 @@ interface PaperTray {
 
     fun recharge()
     fun decrease()
-    fun getPaperLevel(): Int
 }

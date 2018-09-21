@@ -4,7 +4,7 @@ import javax.inject.Inject
 
 abstract class PaperTrayImpl @Inject constructor(private val capacity: Int) : PaperTray {
 
-    private var level: Int = 0
+    var level: Int = 0
 
     init {
         level = capacity
@@ -17,10 +17,5 @@ abstract class PaperTrayImpl @Inject constructor(private val capacity: Int) : Pa
 
     override fun decrease() {
         level--
-    }
-
-    override fun getPaperLevel(): Int {
-        println("Getting paper level...")
-        return level
     }
 }

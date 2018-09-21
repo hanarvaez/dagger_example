@@ -4,7 +4,7 @@ import javax.inject.Inject
 
 class TonerCartridgeImpl @Inject constructor(private val capacity: Int) : TonerCartridge {
 
-    private var level: Int = 0
+    var level: Int = 0
 
     init {
         level = capacity
@@ -17,10 +17,5 @@ class TonerCartridgeImpl @Inject constructor(private val capacity: Int) : TonerC
 
     override fun decrease() {
         level--
-    }
-
-    override fun getLevel(): Int {
-        println("Getting toner level...")
-        return level
     }
 }

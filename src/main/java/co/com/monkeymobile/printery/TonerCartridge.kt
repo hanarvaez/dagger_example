@@ -4,5 +4,4 @@ interface TonerCartridge {
 
     fun recharge()
     fun decrease()
-    fun getLevel(): Int
 }

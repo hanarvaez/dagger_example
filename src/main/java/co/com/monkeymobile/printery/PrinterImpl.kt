@@ -17,6 +17,7 @@ class PrinterImpl @Inject constructor(val paperTray: PaperTrayImpl,
     }
 
     override fun print() {
+        println("Printing...")
         printing = true
         paperTray.decrease()
         tonerCartridge.decrease()
@@ -27,22 +28,28 @@ class PrinterImpl @Inject constructor(val paperTray: PaperTrayImpl,
     override fun startPrinting() {
         if (!on) {
             endPrinting()
+            return
         }
 
         if (paperTray.level <= 0) {
+            println("There are not paper")
             endPrinting()
             paperTray.recharge()
+            return
         }
 
         if (tonerCartridge.level <= 0) {
+            println("There are not toner")
             endPrinting()
             tonerCartridge.recharge()
+            return
         }
 
         print()
     }
 
     override fun endPrinting() {
+        println("Ending printing...")
         printing = false
     }
 

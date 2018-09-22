@@ -2,7 +2,7 @@ package co.com.monkeymobile.printery
 
 import javax.inject.Inject
 
-abstract class PaperTrayImpl @Inject constructor(private val capacity: Int) : PaperTray {
+class PaperTrayImpl @Inject constructor(private val capacity: Int) : PaperTray {
 
     var level: Int = 0
 

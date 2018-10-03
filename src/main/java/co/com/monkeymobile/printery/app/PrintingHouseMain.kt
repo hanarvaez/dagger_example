@@ -7,6 +7,12 @@ import javax.inject.Inject
 
 object PrintingHouseMain {
 
+    class PrintingHouse {
+
+        @Inject
+        lateinit var printer: PrinterImpl
+    }
+
     @JvmStatic
     fun main(args: Array<String>) {
         println("Hello world")
@@ -15,16 +21,8 @@ object PrintingHouseMain {
         val printerConfigModule = DaggerPrinterConfigComponent.builder().printerConfigModule(PrinterConfigModule()).build()
         printerConfigModule.inject(printerObject)
 
-
         printerObject.printer.print()
         printerObject.printer.print()
-
-    }
-
-    class PrintingHouse {
-
-        @Inject
-        lateinit var printer: PrinterImpl
     }
 
 }

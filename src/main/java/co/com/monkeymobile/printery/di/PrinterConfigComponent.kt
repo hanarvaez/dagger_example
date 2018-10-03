@@ -10,9 +10,9 @@ import javax.inject.Singleton
 @Component(modules = [PrinterConfigModule::class])
 interface PrinterConfigComponent {
 
+    fun inject(main: PrintingHouseMain.PrintingHouse)
+
     fun getPaperTray() : PaperTrayImpl
 
     fun getTonerCartridge() : TonerCartridgeImpl
-
-    fun inject(main: PrintingHouseMain.PrintingHouse)
 }

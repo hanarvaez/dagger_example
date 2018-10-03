@@ -2,13 +2,10 @@ package co.com.monkeymobile.printery
 
 import javax.inject.Inject
 
-class PaperTrayImpl @Inject constructor(private val capacity: Int) : PaperTray {
+class PaperTrayImpl @Inject constructor() : PaperTray {
 
     var level: Int = 0
-
-    init {
-        level = capacity
-    }
+    var capacity: Int = 0
 
     override fun recharge() {
         println("Rechargin paper...")

@@ -5,7 +5,7 @@ import co.com.monkeymobile.printery.di.DaggerPrinterConfigComponent
 import co.com.monkeymobile.printery.di.PrinterConfigModule
 import javax.inject.Inject
 
-object PrintingHouseMain {
+object PrintingHouseApp {
 
     class PrintingHouse {
 

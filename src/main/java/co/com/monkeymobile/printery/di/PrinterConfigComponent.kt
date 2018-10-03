@@ -2,7 +2,7 @@ package co.com.monkeymobile.printery.di
 
 import co.com.monkeymobile.printery.PaperTrayImpl
 import co.com.monkeymobile.printery.TonerCartridgeImpl
-import co.com.monkeymobile.printery.app.PrintingHouseMain
+import co.com.monkeymobile.printery.app.PrintingHouseApp
 import dagger.Component
 import javax.inject.Singleton
 
@@ -10,7 +10,7 @@ import javax.inject.Singleton
 @Component(modules = [PrinterConfigModule::class])
 interface PrinterConfigComponent {
 
-    fun inject(main: PrintingHouseMain.PrintingHouse)
+    fun inject(main: PrintingHouseApp.PrintingHouse)
 
     fun getPaperTray() : PaperTrayImpl
 
